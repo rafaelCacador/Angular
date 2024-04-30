@@ -7,8 +7,8 @@ import { HousingLocation } from '../housinglocation';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ CommonModule, HousingLocationComponent ],
-  template:  `
+  imports: [CommonModule, HousingLocationComponent],
+  template: `
   <section>
     <form>
       <input type="text" placeholder="Filter by city">
@@ -16,7 +16,9 @@ import { HousingLocation } from '../housinglocation';
     </form>
   </section>
   <section class="results">
-    <app-housing-location></app-housing-location>
+  <app-housing-location 
+    [housingLocation]= "this.housingLocation" 
+  ></app-housing-location>
   </section>
   `,
 
